@@ -4,12 +4,13 @@ public class SumOfTwoDice {
         // integers between 1 and 6 (such as you might get when rolling dice).
 
         int die = 6;
-        double rng = Math.random();
 
-        double roll1 = (die * rng);
-        double roll2 = (die * rng);
+        double roll1 = 1 + (int) (Math.random() * die);
+        System.out.println("The result of die 1 was " + (int) roll1);
+        double roll2 = 1 + (int) (Math.random() * die);
+        System.out.println("The result of die 2 was " + (int) roll2);
 
-        double result = (int) ((roll1 + roll2) + 1);
+        double result = roll1 + roll2;
         System.out.println("The sum of the dice was " + (int) result);
     }
 }
