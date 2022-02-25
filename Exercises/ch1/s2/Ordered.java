@@ -38,8 +38,10 @@ public class Ordered {
         int y = Integer.parseInt(args[1]);
         int z = Integer.parseInt(args[2]);
 
-        // checks for either strict ascending or descending order
-        boolean orderedCheck = (x < y) && (y < z) || (x > y) && (y > z);
+        // checks for either strictly ascending or descending order
+        boolean orderedCheck = (x < y) && (y < z)
+                || (x > y) && (y > z);
+
 
         System.out.println(orderedCheck);
     }
