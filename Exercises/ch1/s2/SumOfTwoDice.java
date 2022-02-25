@@ -42,15 +42,12 @@ public class SumOfTwoDice {
         // comments?
         // [x] Are variable names meaningful and appropriate?
 
-        int DIE = 6;
+        int DIE_SIDES = 6;
 
-        double randOne = Math.random();
-        double randTwo = Math.random();
+        int rollOne = 1 + (int) (Math.random() * DIE_SIDES);
+        int rollTwo = 1 + (int) (Math.random() * DIE_SIDES);
 
-        int dieOne = (int) (randOne * DIE) + 1;
-        int dieTwo = (int) (randTwo * DIE) + 1;
-
-        int result = dieOne + dieTwo;
+        int result = rollOne + rollTwo;
 
         System.out.println(result);
     }
