@@ -1,15 +1,14 @@
-public class PowersOfTwo {
+public class ForPowersOfTwo {
     public static void main(String[] args) {
-        // prints out the powers of 2 until n
+        // prints the powers of two
         int n = Integer.parseInt(args[0]);
-        int i = 0;
         int power = 1;
-
-        while (i <= n)
+        for (int i = 0; i <= n; i++)
         {
             System.out.println(i + " " + power);
             power = 2 * power;
-            i = i + 1;
         }
+        System.out.println(power);
+        //
     }
 }
