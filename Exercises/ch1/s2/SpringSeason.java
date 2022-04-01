@@ -8,6 +8,7 @@ public class SpringSeason {
         int m = Integer.parseInt(args[0]);
         int d = Integer.parseInt(args[1]);
 
+        // Boolean logic that checks if the values are within a month and match
         boolean isSpring;
         isSpring = (d >= 20) && (d <= 31) && (m == MARCH)
                 || (d >= 1) && (d <= 30) && (m == APRIL)
