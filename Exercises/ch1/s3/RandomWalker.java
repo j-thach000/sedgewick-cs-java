@@ -4,18 +4,23 @@ public class RandomWalker {
 
         int x = 0;
         int y = 0;
+
+        int origin = 0;
+        System.out.println("(" + x + ", " + y + ")");
+
+        int dist = 0;
+
         int steps = 0;
 
-        while (Math.abs(x + y) < r)
-        { // prints coordinates of random steps until the walker is a Manhattan
-          // distance r away from the starting point
-            int direction = 4;
-            int rng = (int) (Math.random() * direction);
+        while (dist < r)
+        { // continues as long as the Manhattan distance is equal to the input
+            double direction = Math.random();
+            if      (direction < 0.25) y++; // north
+            else if (direction < 0.50) y--; // south
+            else if (direction < 0.75) x++; // east
+            else if (direction < 1)    x--; // west
 
-            if (rng == 3) x++; // east
-            if (rng == 2) x--; // west
-            if (rng == 1) y++; // north
-            if (rng == 0) y--; // south
+            dist = Math.abs((origin - x)) + Math.abs((origin - y));
 
             steps++;
 
