@@ -9,8 +9,8 @@ public class GeneralizedHarmonic {
         double sum = 0;
 
         // adds a calculation's result to sum
-        for (int i=1; i <= n; i++) {
-            sum += (1/(Math.pow(i,r)));
+        for (int i = 1; i <= n; i++) {
+            sum += (1/(Math.pow(i, r)));
 
         }
         System.out.println(sum);
